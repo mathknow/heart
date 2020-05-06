@@ -15,12 +15,12 @@ for ii in 0.4*np.arange(0,51):
     plt.xlim([-2.5,2.5])
     plt.ylim([-2.5,4])
     if ii > 12 and ii < 16:
-        plt.text(0, 1, 'X. Chen', size = 55, style = 'italic',
+        plt.text(0, 0.8, 'X. Chen', size = 55, style = 'italic',
                  verticalalignment='center', horizontalalignment='center',
                  color = 'white', alpha = 0.85)
     # end if
     if ii == 16 or ii > 16:
-        plt.text(0, 1, '5 2 0', size = 70, style = 'italic',
+        plt.text(0, 0.8, '5 2 0', size = 70, style = 'italic',
                  verticalalignment='center', horizontalalignment='center',
                  color = 'white', alpha = 0.8)
     # end if       
@@ -85,8 +85,8 @@ plt.savefig('heart4.png')
 plt.clf()
 t = 2*np.pi*np.linspace(0,1,101)
 
-x = 2*(1+np.cos(t))*np.cos(t)
-y = 2*(1+np.cos(t))*np.sin(t)
+x = 2*(1-np.cos(t))*np.cos(t)
+y = 2*(1-np.cos(t))*np.sin(t)
 plt.plot(x,y,'-r')
 plt.axis('equal')
 plt.savefig('heart5.png')
@@ -114,6 +114,3 @@ plt.figure(figsize=(7,7))
 plt.contour(x,y,z,0,colors='r')
 plt.axis('equal')
 plt.savefig('heart7.png')
-
-
-
